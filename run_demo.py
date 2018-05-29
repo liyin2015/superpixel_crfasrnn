@@ -31,7 +31,7 @@ import util
 def main():
     input_file = 'image.jpg'
     output_file = 'labels.png'
-    segment_file = 'segment2.jpg'
+    segment_file = 'segment.jpg'
 
     # Download the model from https://goo.gl/ciEYZi
     saved_model_path = 'crfrnn_keras_model.h5'
