@@ -8,8 +8,6 @@ This repository contains the codes implementing the following papers:
 
 Keras/Tensorflow code for the "CRF-RNN" semantic image segmentation method, published in the ICCV 2015 paper [Conditional Random Fields as Recurrent Neural Networks](http://www.robots.ox.ac.uk/~szheng/papers/CRFasRNN.pdf). This paper was initially described in an [arXiv tech report](http://arxiv.org/abs/1502.03240). The [online demo](http://crfasrnn.torr.vision) of this project won the Best Demo Prize at ICCV 2015. Original Caffe-based code of this project can be found [here](https://github.com/torrvision/crfasrnn). Results produced with this Keras/Tensorflow code are almost identical to that with the Caffe-based version.
 
-The above code is modified to incorporate papers published in ICIP 2018, Superpixel-enhanced Pairwise Conditional Random Fields for Semantic Segmentation.
-
 If you use this code/model for your research, please cite the following paper:  
 ```
 @inproceedings{crfasrnn_ICCV2015,
@@ -20,6 +18,20 @@ If you use this code/model for your research, please cite the following paper:
     year   = {2015}
 }
 ```
+
+The above code is modified to incorporate papers published in ICIP 2018, [Superpixel-enhanced Pairwise Conditional Random Fields for Semantic Segmentation](https://arxiv.org/abs/1805.11737). The modified code is capable of incorporating superpixel-cues in the CRFs to further increase the accuracy simplying by feeding in one or multiple filtered images in the input. 
+
+If you choose to add superpixels by using this code/model for your research, please cite the following paper:  
+```
+@inproceedings{crfasrnn_ICCV2015,
+    author = {Li Sulimowicz, Ishfaq Ahmad, and Alexander Aved},
+    title  = {Superpixel-enhanced Pairwise Conditional Random Field for Semantic Segmentation},
+    booktitle = {IEEE IEEE International Conference on Image Processing (ICIP)},
+    year   = {2018}
+}
+```
+
+
 
 ## Installation Guide
 
