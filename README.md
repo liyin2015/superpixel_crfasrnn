@@ -97,9 +97,12 @@ probs = model.predict([img_data, seg_data], verbose=False)[0, :, :, :]
 ```
 The following images show the difference w/o CRF.
 
-No CRF![No CRF](labels_before_crf.png)
-With Pairwise CRF![With Pairwise CRF](labels1.png)
-With superpixel![With superpixel](labels.png)
+No CRF
+![No CRF](labels_before_crf.png)
+With Pairwise CRF
+![With Pairwise CRF](labels1.png)
+With superpixel
+![With superpixel](labels.png)
 
 
 ## Notes
