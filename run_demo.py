@@ -36,7 +36,7 @@ def main():
     # Download the model from https://goo.gl/ciEYZi
     saved_model_path = 'crfrnn_keras_model.h5'
 
-    model = get_crfrnn_model_def()
+    model = get_crfrnn_model_def(num_segs = 1)
     model.load_weights(saved_model_path)
 
     img_data, img_h, img_w = util.get_preprocessed_image(input_file)
