@@ -86,6 +86,11 @@ $ python run_demo.py
 ```
 If all goes well, you will see the segmentation results in a file named "labels.png".
 
+### About incorporating unsupervised segmentation cues 
+![No CRF](labels_before crf.png)
+![With Pairwise CRF](labels1.png)
+![With superpixel](labels.png)
+
 
 ## Notes
 1. Current implementation of the CrfRnnLayer only supports batch_size == 1
