@@ -87,7 +87,16 @@ $ python run_demo.py
 If all goes well, you will see the segmentation results in a file named "labels.png".
 
 ### About incorporating unsupervised segmentation cues 
-![No CRF](labels_before crf.png)
+Any extra set of pre-processed segmented image needs to be firstly uploaded:
+```
+seg_data, seg_h, seg_w = util.get_preprocessed_image(segment_file)
+```
+Together with img_data, we feed data into the system as a list [img_data, seg_data]. If we want to feed in more than one set of segmented images, simply put them in the list.
+```
+probs = model.predict([img_data, seg_data], verbose=False)[0, :, :, :]
+```
+The following images show the difference w/o CRF.
+![No CRF](labels_before_crf.png)
 ![With Pairwise CRF](labels1.png)
 ![With superpixel](labels.png)
 
