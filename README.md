@@ -23,12 +23,15 @@ The above code is modified to incorporate papers published in ICIP 2018, [Superp
 
 If you choose to add superpixels by using this code/model for your research, please cite the following paper:  
 ```
-@inproceedings{sppairwiseCRF,
-    author = {Li Sulimowicz, Ishfaq Ahmad, and Alexander Aved},
-    title  = {Superpixel-enhanced Pairwise Conditional Random Field for Semantic Segmentation},
-    booktitle = {IEEE IEEE International Conference on Image Processing (ICIP)},
-    year   = {2018}
-}
+@INPROCEEDINGS{8451218,
+author={L. Sulimowicz and I. Ahmad and A. Aved},
+booktitle={2018 25th IEEE International Conference on Image Processing (ICIP)},
+title={Superpixel-Enhanced Pairwise Conditional Random Field for Semantic Segmentation},
+year={2018},
+volume={},
+number={},
+pages={271-275},
+month={Oct},}
 ```
 
 
