@@ -19,7 +19,7 @@ If you use this code/model for your research, please cite the following paper:
 }
 ```
 
-The above code is modified to incorporate papers published in ICIP 2018, [Superpixel-enhanced Pairwise Conditional Random Fields for Semantic Segmentation](https://arxiv.org/abs/1805.11737). The modified code is capable of incorporating superpixel-cues in the CRFs to further increase the accuracy simplying by feeding in one or multiple filtered images in the input. 
+The above code is modified to incorporate papers published in ICIP 2018, [Superpixel-enhanced Pairwise Conditional Random Fields for Semantic Segmentation](https://arxiv.org/abs/1805.11737). The modified code is capable of incorporating superpixel-cues in the CRFs to further increase the accuracy simply by feeding in one or multiple filtered images in the input. 
 
 If you choose to add superpixels by using this code/model for your research, please cite the following paper:  
 ```
