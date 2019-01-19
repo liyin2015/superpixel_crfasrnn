@@ -28,7 +28,7 @@ from keras.layers import Conv2D, MaxPooling2D, Input, ZeroPadding2D, \
 from crfrnn_layer import CrfRnnLayer
 
 
-def get_crfrnn_model_def():
+def get_crfrnn_model_def(num_segs=0):
     """ Returns Keras CRN-RNN model definition.
 
     Currently, only 500 x 500 images are supported. However, one can get this to
@@ -41,7 +41,10 @@ def get_crfrnn_model_def():
     # Two Input
     input_shape = (height, weight, 3) #might have multiple inputs, batch size is only 1, try to support batch training
     img_input = Input(shape=input_shape)
-    seg_input = Input(shape=input_shape)
+    
+    # initialize input of the segmented image
+    seg_inputs = [Input(shape=input_shape)]*num_segs
+
 
     # Add plenty of zero padding
     x = ZeroPadding2D(padding=(100, 100))(img_input)
@@ -111,9 +114,9 @@ def get_crfrnn_model_def():
                          num_iterations=10,
                          bil_rate = 0.5, #add for the segmentation
                          theta_alpha_seg = 30, #add for the segmentation
-                         name='crfrnn')([upscore, img_input, seg_input]) #set num_iterations to 0 if we do not want crf
+                         name='crfrnn')([upscore, img_input] + seg_inputs) #set num_iterations to 0 if we do not want crf
 
     # Build the model
-    model = Model([img_input, seg_input], output, name='crfrnn_net')
+    model = Model([img_input]+seg_inputs, output, name='crfrnn_net')
 
     return model
